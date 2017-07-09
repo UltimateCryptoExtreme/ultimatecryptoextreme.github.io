@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+	<head>
+		<title>+++ ULTIMATE CRYPTO EXTREME +++</title>
+		<script>
+			var title = document.getElementsByTagName('title')[0];
+			setInterval(function() {
+				var text = title.innerText.replace(' ', '&nbsp;');
+				title.innerHTML = text.slice(1) + text.slice(0, 1);
+			}, 100);
+		</script>	
+	</head>
+	<frameset rows="200, *">
+		<frame src="header.html" name="header">
+		<frame src="content.html" name="content">
+	</frameset>
+</html>

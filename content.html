@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				text-align: center;
+				color: #fff;
+				font-family: "Comic Sans MS";
+				font-size: 2em;
+			}
+			.rainbow-blink {
+				color: '#e2571e';
+			}
+			#gifs > img {
+				height: 300px;
+				width: auto;
+			}
+		</style>
+	</head>
+	<body background="space.jpg">
+		<h1>
+			<img src="fire.gif" height="80px">
+			<span class="blink">ULTIMATE CRYPTO EXTREME</span>
+			<img src="fire.gif" height="80px">
+		</h1>
+		<p>
+			THE BEST RESOURCE FOR CRYPTO TRADING
+		</p>
+		<p>
+			<span class="rainbow-blink">CRAZY</span> GAINS, <b>ZERO</b> RISK
+		</p>
+		<p>
+			Welcome to Ultimate Crypto Extreme (UCE), the <span class="rainbow-blink">best</span> crypto Telegram group, where you will learn about the 10 step program to achieve crypto success.<br>
+			<a href="https://t.me/joinchat/ElBbj0GZ1GXZHmvjLhzPhg" target="_parent">Join</a> now <span class="blink">FOR FREE</span> and learn how to be a successful trader!
+		</p>
+		<hr>
+		<p id="gifs">
+			<img src="skeleton1.gif">
+			<img src="creepy_face.gif">
+			<img src="skeleton2.gif">
+		</p>
+		<script>
+			var blinkers = Array.prototype.slice.call(document.querySelectorAll('.blink'));
+			var blinked = false;
+			setInterval(function() {
+				blinkers.forEach(function(x) {
+					x.style.visibility = blinked ? 'visible' : 'hidden';
+				});
+				blinked = !blinked;
+			}, 200);
+			var rainbows = Array.prototype.slice.call(document.querySelectorAll('.rainbow-blink'));
+			var color = 1;
+			var colors = ['#f00', '#e2571e', '#ff7f00', '#ff0', '#0f0', '#96bf33', '#00f', '#4b0082'];
+			for (var i = colors.length - 1; i > 0; i--) {
+				colors.push(colors[i]);
+			}
+			setInterval(function() {
+				rainbows.forEach(function(x) {
+					x.style.color = colors[color];
+				});
+				color = (color + 1) % (colors.length - 1);
+			}, 50);
+		</script>
+	</body>
+</html>
